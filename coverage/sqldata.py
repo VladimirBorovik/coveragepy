@@ -381,8 +381,8 @@ class CoverageSqliteData(SimpleReprMixin):
         return bool(self._has_arcs)
 
     def measured_files(self):
-        """A list of all files that had been measured."""
-        return list(self._file_map)
+        """A set of all files that had been measured."""
+        return set(self._file_map)
 
     def file_tracer(self, filename):
         """Get the plugin name of the file tracer for a file.
